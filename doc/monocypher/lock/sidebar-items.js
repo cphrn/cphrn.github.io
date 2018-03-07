@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["aead","Encrypt and authenticate plaintext with additional data."],["easy","Encrypt and authenticate plaintext data."]],"struct":[["Context",""]]});

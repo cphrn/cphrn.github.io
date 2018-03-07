@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["verify","Constant time comparison of two equal sized buffers."],["wipe","Clears a memory region."]]});
