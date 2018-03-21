@@ -1,1 +1,1 @@
-initSidebarItems({"fn":[["easy","#Example"],["general","#Example"]]});
+initSidebarItems({"fn":[["easy","Simple function to derive a key from a password."],["general","Function to derive a key from a password with additional data."]]});

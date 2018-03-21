@@ -1,1 +1,1 @@
-initSidebarItems({"fn":[["easy","`HChacha20` special-purpose hashing"]],"struct":[["Context",""]]});
+initSidebarItems({"fn":[["easy","Simple encryption function."]],"struct":[["Context",""]]});

@@ -1,1 +1,1 @@
-initSidebarItems({"fn":[["easy","#Example ``` use monocypher::blake2b::easy;"],["general","#Example ``` use monocypher::blake2b::general;"]],"struct":[["Context",""]]});
+initSidebarItems({"fn":[["easy","Simple function to hash the input data."],["general","Function to hash the input data with an additional key."]],"struct":[["Context",""]]});

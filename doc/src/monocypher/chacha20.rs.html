@@ -121,13 +121,34 @@
 <span id="75">75</span>
 <span id="76">76</span>
 <span id="77">77</span>
+<span id="78">78</span>
+<span id="79">79</span>
+<span id="80">80</span>
+<span id="81">81</span>
+<span id="82">82</span>
+<span id="83">83</span>
+<span id="84">84</span>
+<span id="85">85</span>
+<span id="86">86</span>
+<span id="87">87</span>
+<span id="88">88</span>
 </pre><pre class="rust ">
 <span class="doccomment">//! Chacha20 encryption functions</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! Use the lock functions for authenticated encryption.</span>
 
 <span class="kw">use</span> <span class="ident">ffi</span>;
 <span class="kw">use</span> <span class="ident">std</span>::<span class="ident">mem</span>;
 
-<span class="doccomment">/// `HChacha20` special-purpose hashing</span>
+<span class="doccomment">/// Simple encryption function.</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// # Example</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// ```</span>
+<span class="doccomment">/// use monocypher::chacha20::easy;</span>
+<span class="doccomment">///</span>
+<span class="doccomment">/// easy([42u8; 32], [123u8; 16]);</span>
+<span class="doccomment">/// ```</span>
 <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">easy</span>(<span class="ident">key</span>: [<span class="ident">u8</span>; <span class="number">32</span>], <span class="ident">input</span>: [<span class="ident">u8</span>; <span class="number">16</span>]) <span class="op">-&gt;</span> [<span class="ident">u8</span>; <span class="number">32</span>] {
     <span class="kw">unsafe</span> {
         <span class="kw">let</span> <span class="kw-2">mut</span> <span class="ident">out</span>: [<span class="ident">u8</span>; <span class="number">32</span>] <span class="op">=</span> <span class="ident">mem</span>::<span class="ident">uninitialized</span>();
@@ -138,6 +159,7 @@
 
 <span class="kw">pub</span> <span class="kw">struct</span> <span class="ident">Context</span>(<span class="ident">ffi</span>::<span class="ident">crypto_chacha_ctx</span>);
 
+<span class="doccomment">/// These functions provide an incremental interface for the Chacha20 encryption primitive.</span>
 <span class="kw">impl</span> <span class="ident">Context</span> {
     <span class="attribute">#[<span class="ident">inline</span>]</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">new</span>(<span class="ident">key</span>: <span class="kw-2">&amp;</span>[<span class="ident">u8</span>], <span class="ident">nonce</span>: [<span class="ident">u8</span>; <span class="number">8</span>]) <span class="op">-&gt;</span> <span class="ident">Context</span> {
