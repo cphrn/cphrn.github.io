@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["public_key","Computes the public key of the specified secret key."],["sign","Signs a message with secret_key. The public key is optional, and will be recomputed if not provided. This recomputation doubles the execution time."]],"struct":[["Context",""]]});
