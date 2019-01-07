@@ -1,1 +1,1 @@
-initSidebarItems({"mod":[["blake2b","Blake2b hash function"]]});
+initSidebarItems({"mod":[["blake2b","Blake2b hash function"],["hchacha20","HChacha20 special purpose hashing function"]]});

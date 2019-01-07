@@ -1,1 +1,1 @@
-initSidebarItems({"fn":[["easy","Simple encryption function."]],"struct":[["Context",""]]});
+initSidebarItems({"struct":[["Context",""]]});

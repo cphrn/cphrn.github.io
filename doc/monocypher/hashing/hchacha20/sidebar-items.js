@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["easy","Not-so-cryptographic hashing function. Use blak2b."]]});
